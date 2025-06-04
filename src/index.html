@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Applicant Form</title>
+</head>
+<body class="form-applicant">
+    <div class="form-applicant-container">
+        <h1 class="form-applicant-title">Applicant Form</h1>
+        <div class="form-applicant-box">
+            <form id="form-applicant-form">
+                <label for="applicantName" class="form-applicant-label">Name of Applicant</label>
+                <input type="text" id="applicantName" name="applicantName" required placeholder="Name of Applicant" class="form-applicant-input">
+
+                <label for="fatherName" class="form-applicant-label">Father's Name</label>
+                <input type="text" id="fatherName" name="fatherName" required placeholder="Father's Name" class="form-applicant-input">
+
+                <fieldset class="form-applicant-fieldset">
+                    <legend class="form-applicant-legend">Father's Occupation</legend>
+                    <label >
+                        <input type="radio" name="fatherOccupation" value="Gov" required class="form-applicant-radio"> Gov
+                    </label>
+                    <label >
+                        <input type="radio" name="fatherOccupation" value="Private" required class="form-applicant-radio"> Private
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-applicant-fieldset">
+                    <legend class="form-applicant-legend">Mother's Occupation</legend>
+                    <label >
+                        <input type="radio" name="motherOccupation" value="Gov" required class="form-applicant-radio"> Gov
+                    </label>
+                    <label>
+                        <input type="radio" name="motherOccupation" value="Private" required class="form-applicant-radio"> Private
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-applicant-fieldset">
+                    <legend class="form-applicant-legend">Class/Course</legend>
+                    <label >
+                        <input type="radio" name="classCourse" value="English Medium" required class="form-applicant-radio"> English Medium
+                    </label>
+                    <label >
+                        <input type="radio" name="classCourse" value="Hindi Medium" required class="form-applicant-radio"> Hindi Medium
+                    </label>
+                </fieldset>
+
+                <label for="aadhaarNumber" class="form-applicant-label">Aadhaar Card Number</label>
+                <input type="number" id="aadhaarNumber" name="aadhaarNumber" required placeholder="Aadhaar Card Number" minlength="12" maxlength="12" oninput="if(this.value.length>12)this.value=this.value.slice(0,12);" class="form-applicant-input">
+
+                <label for="dob" class="form-applicant-label">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required placeholder="Date of Birth" class="form-applicant-input">
+
+                <label for="schoolName" class="form-applicant-label">Name of School</label>
+                <textarea id="schoolName" name="schoolName" required placeholder="Name of School" class="form-applicant-textarea"></textarea>
+
+                <label for="address" class="form-applicant-label">Address</label>
+                <textarea id="address" name="address" required placeholder="Address" class="form-applicant-textarea"></textarea>
+
+                <label for="contactNumber" class="form-applicant-label">Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" maxlength="10" required placeholder="Contact Number" class="form-applicant-input">
+
+                <label for="parentNumber" class="form-applicant-label">Parent's Number</label>
+                <input type="tel" id="parentNumber" name="parentNumber" pattern="[0-9]{10}" maxlength="10" required placeholder="Parent's Number" class="form-applicant-input">
+
+                <button type="submit" class="form-applicant-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
